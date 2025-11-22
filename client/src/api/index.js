@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: `http://localhost:3300/api` });
+const API = axios.create({ baseURL: `https://streampod-kihr.onrender.com/api` });
 
 //auth
 export const signIn = async ({ email, password }) => await API.post('/auth/signin', { email, password });
