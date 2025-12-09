@@ -167,7 +167,7 @@ export const generateOTP = async (req, res, next) => {
     } else {
         transporter.sendMail(verifyOtp, (err) => {
             if (err) {
-                next(err)
+                return next(err)
             } else {
                 return res.status(200).send({ message: "OTP sent" });
             }
